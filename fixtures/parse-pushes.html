@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Push Notifications | Parse</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+        <meta name="apple-mobile-web-app-title" content="Parse">
+        <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#5298fc">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <meta name="application-name" content="Parse">
+
+    <link href="/assets/main.css?685f74e" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/print.css?685f74e" media="print" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/ie7.css" />
+    <![endif]-->
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/ie8.css" />
+    <![endif]-->
+    <!--[if lt IE 10]>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/ie89.css" />
+    <![endif]-->
+    <script>if(Function('/*@cc_on return document.documentMode===10@*/')()){document.documentElement.className+=' ie10';}</script>
+
+    <script src="/assets/main.js?685f74e" type="text/javascript"></script>
+
+    <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="isXRSYoJChurMnmewJ3+sJCscza7sexjfYc8MXXsMDw="/>
+    <meta name="description" content="Focus on creating unique &amp; engaging apps on any platform. We take care of everything else your app needs, from the core of your app to analytics and push notifications." />
+    <meta name="keywords" content="backend, mobile, development, server, code" />
+    <meta property="fb:app_id" content="361736430535656" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Parse" />
+    <meta property="og:image" content="http://parse.com/images/og/default.jpg" />
+    <meta property="og:description" content="Focus on creating unique &amp; engaging apps on any platform. We take care of everything else your app needs, from the core of your app to analytics and push notifications." />
+    <meta property="og:url" content="https://parse.com/apps/push-tests--2/push_notifications">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+</head>
+
+
+  <body class="pure dashboard p_push_notifications p_push_notifications_index  user_logged_in">
+    <div class="dashboard_header_container">
+    <ul class="banner_nag">
+  </ul>
+
+
+
+  <div class="dashboard_header">
+    <div class="actions_left">
+      <a href="/apps" class="all_apps">
+        <div class="menu_p"><img width="17" src="/images/p.png"></div>
+        <div class="menu_icon"><i class="icon_listApps2"></i></div>
+      </a>
+      <div class="app_selector unselectable"><div class="current_app prod">NEW Sport1 News</div><ul><li><a href="/apps/push-tests--2/push_notifications">NEW Sport1 News</a></li><li><a href="/apps/news-live--4/push_notifications">NEWS LIVE</a></li><li><a href="/apps/sport1-fm/push_notifications">Sport1 FM</a></li><li><a href="/apps/new">Create app</a></li></ul></div>
+    </div>
+    <div class="actions_right">
+      <div class="account_menu">    
+    <a class="account_details" href="/account">
+      <img src="https://secure.gravatar.com/avatar/5dd8ea4df007bfdabc74537bcc0cb3c8?size=130&amp;default=https%3A%2F%2Fwww.parse.com%2Fimages%2Faccounts%2Fno_avatar.png&amp;" />
+      <span>SPORT1 GmbH</span></a>
+  <div class="account_links">
+    <a href="/account"><i class="icon_user"></i><span>Account</span></a>
+    <a href="/apps"><i class="icon_listApps2"></i><span>Dashboard</span></a>
+    <ul>
+      <li><a href="/apps/push-tests--2" class="nowrap">NEW Sport1 News</a></li>
+      <li><a href="/apps/news-live--4" class="nowrap">NEWS LIVE</a></li>
+      <li><a href="/apps/sport1-fm" class="nowrap">Sport1 FM</a></li>
+    </ul>
+    <a href="/user_session" data-method="delete" rel="nofollow"><i class="icon_crossCircle"></i><span>Log out</span></a>
+  </div>
+</div>
+    </div>
+      <div class="actions_middle sel_3"><span><a href="/apps/push-tests--2/collections" class="dashboard_section core"><span>Core</span></a><a href="/apps/push-tests--2" class="dashboard_section analytics"><span>Analytics</span></a></span><span><a href="/apps/push-tests--2/push_notifications" class="dashboard_section push"><span>Push</span></a></span><span><a href="/apps/push-tests--2/edit" class="dashboard_section settings"><span>Settings</span></a><a href="/docs" class="dashboard_section docs"><span>Docs</span></a></span></div>
+
+  </div>
+</div>
+
+
+      <div class="dashboard_nav">
+        <ul>
+  <li class="selected">
+    <a href="/apps/push-tests--2/push_notifications?type=all">
+      <i class="icon_parsePush"></i>
+      <span>Pushes</span>
+    </a>
+    <ul class="class_list">
+      <li class="selected">
+        <a href="/apps/push-tests--2/push_notifications?type=all">
+          <span>All</span>
+        </a>
+      </li>
+      <li >
+        <a href="/apps/push-tests--2/push_notifications?type=campaign">
+          <i class="icon_campaign"></i>
+          <span>Campaign</span>
+        </a>
+      </li>
+      <li >
+        <a href="/apps/push-tests--2/push_notifications?type=experiment">
+          <i class="icon_chemistry"></i>
+          <span>Experiment</span>
+        </a>
+      </li>
+      <li >
+        <a href="/apps/push-tests--2/push_notifications?type=api">
+          <i class="icon_transactionalPush"></i>
+          <span>API</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li >
+    <a href="/apps/push-tests--2/push_audiences">
+      <i class="icon_people"></i>
+      <span>Audiences</span>
+    </a>
+  </li>
+</ul>
+
+      </div>
+
+    <div class="dashboard_content">
+      
+
+
+<div class="push_ui">
+  <div class="ui_content_header">
+    <div class="ui_actions_right">
+      <a href="/apps/push-tests--2/push_notifications/new" class="ui_button"><i class="icon_plus"></i><span>Send a push</span></a>
+    </div>
+    <div>Push Notifications</div>
+  </div>
+
+
+    <table class="full_table" id="push_table">
+      <tr>
+        <th>Type</th>
+        <th>Status</th>
+        <th style="width: 10%">Target</th>
+        <th style="width: 5%" class="centered">Pushes Sent</th>
+        <th style="width: 65%">Name</th>
+        <th style="width: 20%">Time</th>
+      </tr>
+
+        <tr data-href="/apps/push-tests--2/push_notifications/OqnWec9FLV">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8240425event-startendGame</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_OqnWec9FLV" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;Spielende Olympique Lyon gegen Paris Saint-Germain. 1:2&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:41:23Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/4Sl72sPgcV">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8240425event-substitution</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_4Sl72sPgcV" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;90: Auswechslung bei Paris Saint-Germain Jean-Kévin Augustin für Edinson Cavani&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:41:22Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/KBdTlAqVlV">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8272954event-startendGame</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_KBdTlAqVlV" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;Spielende Real Sociedad San Sebastian gegen FC Barcelona. 1:1&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:39:21Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/hzO8ddade5">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8281591event-startendGame</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_hzO8ddade5" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;Spielende AS Rom gegen Pescara Calcio. 3:2&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:38:39Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/O5l1ti19Ww">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8281591event-substitution</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_O5l1ti19Ww" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;90: Auswechslung bei AS Rom Thomas Vermaelen für Mohamed Salah&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:37:59Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/Y3DdSCS30E">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8240425event-yellowCard</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_Y3DdSCS30E" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;89: Gelbe Karte Marco Verratti (Paris Saint-Germain)&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:36:36Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/4kEWHa8HJo">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8240425event-yellowCard</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_4kEWHa8HJo" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;86: Gelbe Karte Thiago Silva (Paris Saint-Germain)&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:34:33Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/Xe71gYuOop">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8240425event-substitution</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_Xe71gYuOop" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;85: Auswechslung bei Paris Saint-Germain Grzegorz Krychowiak für Lucas&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:33:09Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/tm7jEGF6d8">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8240425event-yellowCard</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_tm7jEGF6d8" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;83: Gelbe Karte Serge Aurier (Paris Saint-Germain)&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:31:48Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/kI2lh8S7LZ">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8272954event-yellowCard</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_kI2lh8S7LZ" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;88: Gelbe Karte Zurutuza (Real Sociedad San Sebastian)&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:31:47Z
+          </td>
+        </tr>
+        <tr data-href="/apps/push-tests--2/push_notifications/pCt6maW3K0">
+          <td class="push_type">
+            <i class="icon_transactionalPush has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">API</span></span>
+            </i>
+          </td>
+          <td class="push_status">
+            <div class="succeeded has_tooltip">
+              <span class="tooltip_wrap"><span class="tip">Succeeded</span></span>
+            </div>
+          </td>
+          <td class="push_target">
+              <span class="has_tooltip">
+                Channels
+                <span class="tooltip_wrap">
+                  <span class="tip">game-8240425event-goal</span>
+                </span>
+              </span>
+          </td>
+          <td id="pushes_sent_pCt6maW3K0" class="pushes_sent"></td>
+          <td class="push_name">
+                {
+  &quot;body&quot;: &quot;81: Tor für Paris Saint-Germain 1:2 durch Edinson Cavani&quot;,
+  &quot;title&quot;: &quot;SPORT1&quot;
+}
+          </td>
+          <td class="push_time nowrap">
+            2016-11-27T21:30:23Z
+          </td>
+        </tr>
+      </table>
+
+        <div class="ui_content_footer">
+          <div class="ui_actions_right">
+            <div class="pagination"><span class="previous_page disabled"><i class="icon_arrowLeft"></i></span> <em class="current">1</em> <a rel="next" href="/apps/push-tests--2/push_notifications?page=2&amp;type=all">2</a> <a href="/apps/push-tests--2/push_notifications?page=3&amp;type=all">3</a> <a href="/apps/push-tests--2/push_notifications?page=4&amp;type=all">4</a> <a href="/apps/push-tests--2/push_notifications?page=5&amp;type=all">5</a> <a href="/apps/push-tests--2/push_notifications?page=6&amp;type=all">6</a> <a href="/apps/push-tests--2/push_notifications?page=7&amp;type=all">7</a> <a href="/apps/push-tests--2/push_notifications?page=8&amp;type=all">8</a> <a href="/apps/push-tests--2/push_notifications?page=9&amp;type=all">9</a> <span class="gap">&hellip;</span> <a href="/apps/push-tests--2/push_notifications?page=999&amp;type=all">999</a> <a href="/apps/push-tests--2/push_notifications?page=1000&amp;type=all">1000</a> <a class="next_page" rel="next" href="/apps/push-tests--2/push_notifications?page=2&amp;type=all"><i class="icon_arrowRight"></i></a></div>
+          </div>
+        </div>
+</div>
+
+<script id="ea7d14d3ef6bb1de99c971a10f7d91de" type="application/json">{&quot;OqnWec9FLV&quot;:&quot;2016-11-27T21:41:23+00:00&quot;,&quot;4Sl72sPgcV&quot;:&quot;2016-11-27T21:41:22+00:00&quot;,&quot;KBdTlAqVlV&quot;:&quot;2016-11-27T21:39:21+00:00&quot;,&quot;hzO8ddade5&quot;:&quot;2016-11-27T21:38:39+00:00&quot;,&quot;O5l1ti19Ww&quot;:&quot;2016-11-27T21:37:59+00:00&quot;,&quot;Y3DdSCS30E&quot;:&quot;2016-11-27T21:36:36+00:00&quot;,&quot;4kEWHa8HJo&quot;:&quot;2016-11-27T21:34:33+00:00&quot;,&quot;Xe71gYuOop&quot;:&quot;2016-11-27T21:33:09+00:00&quot;,&quot;tm7jEGF6d8&quot;:&quot;2016-11-27T21:31:48+00:00&quot;,&quot;kI2lh8S7LZ&quot;:&quot;2016-11-27T21:31:47+00:00&quot;,&quot;pCt6maW3K0&quot;:&quot;2016-11-27T21:30:23+00:00&quot;}</script>
+<script type="text/javascript">var pushData = JSON.parse(_.unescape($('#ea7d14d3ef6bb1de99c971a10f7d91de').html()));</script>
+
+
+    </div>
+
+    <div class="dashboard_footer">
+  <a class="dashboard_swap" id="trigger_swap">
+    <svg width="30" height="30" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <path class="st0" d="M58.29 62.17H33.75c-3.553 0-5.658 2.172-5.658 5.396 0 2.83 1.908 5.434 4.67 5.434 3.16 0 5.04-2.776 5.238-6h7c-.33 7.763-5.066 12-12.303 12-6.776 0-11.776-4.658-11.776-11.5 0-7.105 5.33-11.5 13.225-11.5h24.342c8.224 0 14.474-6.592 14.474-14.75C72.96 33.026 67.37 27 59.41 27c-7.895 0-14.21 6.092-14.21 16.618V51H37.96v-7.382C37.96 29.538 47.04 20 59.54 20c11.973 0 20.657 8.947 20.657 21.118 0 12.237-9.342 21.053-21.908 21.053M50 100c27.96 0 50-22.105 50-50 0-27.83-22.04-50-50-50S0 22.17 0 50c0 27.895 22.04 50 50 50"/>
+    </svg>
+    <span>Switch to the new Dashboard</span>
+  </a>
+  <form id="swap_dashboard" action="/account/enable_dashboard" method="post">
+    <input id="authenticity_token" name="authenticity_token" type="hidden" value="isXRSYoJChurMnmewJ3+sJCscza7sexjfYc8MXXsMDw=" />
+  </form>
+  <div class="actions_right">
+  <a href="https://parse.com/docs/server/guide">Parse Server</a>  
+	<a href="/docs">Docs</a>
+	<a href="/account">Billing</a>
+    <a href="/downloads">Downloads</a>
+    <a href="/help">Help</a>
+    <a href="http://status.parse.com">Status</a>
+    <a href="http://blog.parse.com">Blog</a>
+    <a href="https://parse.com/">Parse.com</a>
+  </div>
+</div>
+
+
+
+    
+    <script id="a00a5cc90e7069acea1bd533bd5d4447" type="application/json">{&quot;company_name&quot;:&quot;SPORT1 GmbH&quot;,&quot;company_type&quot;:&quot;small_business&quot;,&quot;created_at&quot;:&quot;2014-02-21T13:33:09Z&quot;,&quot;email&quot;:&quot;software@sport1.de&quot;,&quot;id&quot;:171527,&quot;name&quot;:&quot;SPORT1 GmbH&quot;,&quot;title&quot;:&quot;Dev&quot;,&quot;marketo_hash&quot;:&quot;231ea8540ed564c0b41ee2a7abd953d94024f05d&quot;,&quot;parse_apps_list&quot;:[{&quot;name&quot;:&quot;NEWS LIVE&quot;,&quot;id&quot;:&quot;news-live--4&quot;},{&quot;name&quot;:&quot;Sport1 FM&quot;,&quot;id&quot;:&quot;sport1-fm&quot;},{&quot;name&quot;:&quot;NEW Sport1 News&quot;,&quot;id&quot;:&quot;push-tests--2&quot;}],&quot;supported_platforms_list&quot;:{&quot;any&quot;:&quot;-&quot;,&quot;ios&quot;:&quot;iOS / OS X&quot;,&quot;android&quot;:&quot;Android&quot;,&quot;javascript&quot;:&quot;JavaScript&quot;,&quot;windows&quot;:&quot;Windows&quot;,&quot;dotnet&quot;:&quot;.NET&quot;,&quot;cloud_code&quot;:&quot;Cloud Code&quot;,&quot;rest&quot;:&quot;REST API&quot;,&quot;push&quot;:&quot;Push Notifications&quot;,&quot;xamarin&quot;:&quot;Xamarin&quot;,&quot;unity&quot;:&quot;Unity&quot;}}</script>
+<script type="text/javascript">var user = JSON.parse(_.unescape($('#a00a5cc90e7069acea1bd533bd5d4447').html()));</script>
+
+    <script type="text/javascript">
+        App.currentUser = new App.Models.User(user);
+    </script>
+
+<script type="text/javascript">
+  App.SessionRedirect.initialize();
+</script>
+
+  <script id="01113ae89e020812289704c99aa2b6b2" type="application/json">{&quot;api_key&quot;:&quot;54e5ea29-1d09-4586-9fd9-cc15b4d51379&quot;,&quot;created_at&quot;:&quot;2015-09-02T09:04:51Z&quot;,&quot;javascript_key&quot;:&quot;RptJmw81BsBicBd1nAp09QAvjMpkPnC3GvqlAcqQ&quot;,&quot;name&quot;:&quot;NEW Sport1 News&quot;,&quot;push_key&quot;:&quot;OMmisxg8QfVU7GaV2JJNhckALX8JdoAEYRiMuHOl&quot;,&quot;rest_api_key&quot;:&quot;q4uqzu3JwCorXIKGYTCptRxXzB0KBnMRw8szIe9Q&quot;,&quot;send_email_address&quot;:&quot;no-reply@parseapps.com&quot;,&quot;verify_emails&quot;:false,&quot;webhook_key&quot;:&quot;ayJmcHsm7Ni6rpS8F0heaJPqSaxj7GHSN6J7wewk&quot;,&quot;windows_key&quot;:&quot;oNCs66j0YWOt5rhJPUpndIIKmizPy0jiKoLqSEcg&quot;,&quot;key&quot;:&quot;m7AoFCqMkfnGdQlyWlojbsFuRf2MqZ3wy79eFMAh&quot;,&quot;secret&quot;:&quot;PnpACOGfalrUFwjC8M35oKVsYsyNFuaXnNEeif8A&quot;,&quot;friendly_id&quot;:&quot;push-tests--2&quot;,&quot;is_production?&quot;:true}</script>
+<script type="text/javascript">var app = JSON.parse(_.unescape($('#01113ae89e020812289704c99aa2b6b2').html()));</script>
+  <script type="text/javascript">
+    App.currentApp = new App.Models.App(app);
+  </script>
+
+
+  <script type="text/javascript">
+    Marketo._devEnvironment = false;
+    Marketo.associateLead();
+  </script>
+
+    <script type="text/javascript">
+        (function() {
+  var pushTable = document.getElementById('push_table');
+  if (!pushTable) {
+    return;
+  }
+  var times = pushTable.getElementsByClassName('push_time');
+  for (var i = 0, len = times.length; i < len; i++) {
+    var rawString = times[i].innerHTML;
+    var m = moment(rawString);
+    var frag = document.createDocumentFragment();
+    frag.appendChild(UI.tag('span', {}, m.format('MMM D,')));
+    frag.appendChild(UI.tag('time', {}, m.format('HH:mm a')));
+    if (rawString.indexOf('Z') < 0) {
+      var icon = UI.createIcon('chronometer');
+      UI.addClass(icon, 'has_tooltip');
+      icon.appendChild(UI.createTooltip('Local timezone delivery', { direction: 'left' }));
+      frag.appendChild(icon);
+    }
+    times[i].innerHTML = '';
+    times[i].appendChild(frag);
+  }
+  UI.delegate('click', pushTable, 'tr', function(e) {
+    if (this !== pushTable.children[0].children[0]) {
+      if (e.metaKey) {
+        window.open(this.getAttribute('data-href'));
+      } else {
+        window.location = this.getAttribute('data-href');
+      }
+    }
+  });
+
+  $.get(
+    '/apps/push-tests--2/push_notifications/pushes_sent_batch',
+    { pushes: pushData },
+    function(countMap) {
+      _.each(_.keys(countMap), function(pushId) {
+        document.getElementById('pushes_sent_' + pushId).innerHTML = countMap[pushId];
+      });
+    },
+    'json'
+  );
+})();
+      new App.Views.Nagging.Banner().render();
+    document.getElementById('trigger_swap').addEventListener('click', function() {
+      document.getElementById('swap_dashboard').submit();
+    });
+    UI.initMenus();
+    // Disable all buttons on click
+    $('form').submit(function(e) {
+        $(this).find("button").attr("disabled", "disabled").addClass("disabled");
+    });
+
+    // Highlight all code blocks on the page if any are present
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.defaults['class-name'] = "syntaxhighlighter";
+    SyntaxHighlighter.all();
+
+    // Custom template settings to escape javascript injected HTML by default (use - instead of = otherwise)
+    _.templateSettings = {
+      evaluate    : /<%([\s\S]+?)%>/g,
+      escape : /<%=([\s\S]+?)%>/g,
+      interpolate : /<%-([\s\S]+?)%>/g
+    };
+
+    // Intercept all push state links and use Parse.history to navigate instead of 
+    // letting the browser change the page. 
+    $(document).delegate("a[data-pushstate='true']", "click", function(e) {
+      var href = $(e.currentTarget).attr('href'); // find url
+
+      // disable in admin panel
+      if (window.location.pathname.substring(0,6) === "/admin") {
+        $(e.currentTarget).attr("href", "#" + $(e.currentTarget).attr("href"));
+        return true;
+      }
+
+      // allow opening new tabs, windows, etc
+      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || !Parse.history || !Parse.history._hasPushState) {
+        return true;
+      }
+
+      Parse.history.navigate(href, { trigger: true });
+      return false;
+    });
+
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23813809-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+    
+    <script type="text/javascript">
+    if (typeof console == "object") {
+      if (Util.is_chrome) {
+        console.log("%cHey! Like what you see and enjoy looking under the hood? That's cool. We love curious people. You should join us and help us build great stuff. https://www.parse.com/jobs", "color: #0677c8; font-size: 18px; font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;");
+      } else {
+        console.log("Hey! Like what you see and enjoy looking under the hood? That's cool. We love curious people. You should join us and help us build great stuff. https://www.parse.com/jobs");
+      }
+    }
+    </script>
+
+
+<script>
+  _gaq.push([
+    '_setCustomVar',
+    1,             // This custom var is set to slot #1.
+    'Logged In',   // The name of the custom variable.
+    'true',
+    2           // Sets the scope to session-level.
+   ]);
+</script>
+
+  <script>
+    _gaq.push([
+      '_setCustomVar',
+      2,          // Custom variable name
+      'Company Type',
+      "small_business",
+      2           // Sets the scope to session-level.
+    ]);
+  </script>
+
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  _kiq.push(['identify', "software@sport1.de"]);
+</script>
+
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/52373e831aa4c02794000069.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-56BZ4D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56BZ4D');</script>
+
+<!-- Facebook Custom Audience Tracking Pixel -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '574561515946252']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=574561515946252&ev=NoScript" /></noscript>
+
+  </body>
+</html>
+
