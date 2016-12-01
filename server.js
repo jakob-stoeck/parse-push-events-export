@@ -113,8 +113,8 @@ const ParseExporter = {
 
 module.exports = ParseExporter;
 
-function persistPushes(pushes) {
-  const persistPush = 'INSERT OR REPLACE INTO pushes (id, channels, content, time, sent) VALUES ($id, $channels, $content, $time, $sent)';
+function persistPushes(pushes, replace=true) {
+  const persistPush = `INSERT OR ${replace ? 'REPLACE' : 'IGNORE'} INTO pushes (id, channels, content, time, sent) VALUES ($id, $channels, $content, $time, $sent)`;
   let insertPush = db.prepare(persistPush);
   pushes.forEach(push => {
     insertPush.run({
@@ -139,7 +139,7 @@ function persistPages(pageFrom, pageTo = pageFrom) {
         if (pageNo === pageTo) {
           console.log(`Earliest push: ${result.slice(-1)[0].time}`);
         }
-        persistPushes(result);
+        persistPushes(result, false);
       });
     }
     // db.each('SELECT id, channels from pushes', (err, row) => {
